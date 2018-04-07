@@ -1,0 +1,29 @@
+<div>
+    <label>What is your email address?</label>
+    <input type="text" ng-model="handle" />
+</div>
+
+<hr />
+
+<h1>Email address is: {{ lowercasehandle() }}</h1>
+
+<div class="alert" ng-class="{'alert-warning': handle.length < minCharacters, 'alert-danger': handle.length > maxCharacters}" ng-show="handle.length !== characters">
+
+    <div ng-show="handle.length < minCharacters">
+        Size less than 10 characters
+    </div>
+
+    <div ng-show="handle.length > maxCharacters">
+        Size greater than 30 characters
+    </div>
+
+</div>
+
+<div>
+    <h3>Rules</h3>
+    <ul>
+<!--        Looping the array and displaying it-->
+        <li ng-repeat="rule in rules">{{rule.rulename}}</li>
+    </ul>
+    Add rule: <input type="text" ng-model="addRule" /><a href="#" class="btn btn-default" ng-click="newRule()">Add</a>
+</div>

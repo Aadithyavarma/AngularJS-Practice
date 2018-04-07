@@ -1,0 +1,10 @@
+<h1>This is the second Page.</h1>
+<h3>Scope value is {{num}}</h3>
+<h4>Add a ' / ' and a number in the URL to change the scope value</h4>
+<hr />
+<h3>Address of various people</h3>
+<div class="list-group" >
+<!--    Custom HTML tag using custom directives-->
+    <address-return ng-repeat="person in persons" person-name="{{person.name}}" person-address="{{person.address}}"></address-return>
+    
+</div>
